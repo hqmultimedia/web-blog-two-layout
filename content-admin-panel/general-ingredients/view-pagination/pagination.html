@@ -1,0 +1,64 @@
+<style>
+    .pagination>.active>a,
+    .pagination>.active>a:focus,
+    .pagination>.active>a:hover,
+    .pagination>.active>span,
+    .pagination>.active>span:focus,
+    .pagination>.active>span:hover {
+        background-color: #262626;
+        border-color: #262626;
+    }
+    
+    .pagination>li>a,
+    .pagination>li>span {
+        color: #337ab7;
+        background-color: #D5D5D5;
+        border: 1px solid #D5D5D5;
+        color: #262626;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        margin: 0 0 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    
+    .pagination>li:first-child>a,
+    .pagination>li:first-child>span {
+        border-radius: 50%;
+    }
+    
+    .pagination>.disabled>a {
+        background-color: #D5D5D5;
+        border: 1px solid #D5D5D5;
+        color: #262626;
+    }
+</style>
+
+<div class="right-end" id="dvCate">
+    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true">
+    </dir-pagination-controls>
+</div>
+
+
+<script>
+    $('#dvCate').click(function() {
+
+
+        event.preventDefault();
+        $('.load').css("display", "block");
+        var header = $('.load');
+
+        setTimeout(function() {
+            header.fadeOut('slow');
+        }, 700);
+        $('body,html').animate({
+            scrollTop: 610
+        }, 0);
+
+
+
+    });
+</script>

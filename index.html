@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://hqmultimedia.github.io/web-blog-two-layout/">
+    <link rel="icon" href="source-data/logo/logo-web-2.png" type="image/x-icon">
+    <title>Web Blog Project</title>
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- fontawesome 6.0 -->
+    <link rel="stylesheet" href="library/fontawesome/css/all.min.css">
+
+
+
+    <!-- A.HQ-css-plugin -->
+    <link rel="stylesheet" href="library/hq-multimedia-plugin/hq-css/hqcss-ver-1.9.css">
+
+    <!-- B.Vendor-Library -->
+    <!-- B1.W3-Css -->
+    <link rel="stylesheet" href="library/w3css/w3.css">
+
+
+    <!--B2.Bootstrap 5 W3School -->
+    <link rel="stylesheet" href="library/bootstrap-w3schools.com/css/bootstrap-5.min.css">
+
+    <script src="library/bootstrap-w3schools.com/js/jquery.min.js"></script>
+
+
+    <script src="library/bootstrap-w3schools.com/js/popper.min.js"></script>
+
+    <script src="library/bootstrap-w3schools.com/js/bootstrap.min.js"></script>
+
+
+    <!-- OWL Slider -->
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- isotop(mansory) -->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="vendor/fancybox_3/lib/jquery.mousewheel.pack.js"></script>
+    <script type="text/javascript" src="vendor/fancybox_3/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox_3/source/jquery.fancybox.css" media="screen" />
+
+
+    <!-- video -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist-edit-by-user.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/normalize.min.css">
+    <!--end video -->
+
+
+
+
+    <!-- B3.AngularJS -->
+    <script src="library/angular-file-upload-master/js/angular1.5.5.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-animate.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-aria.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-messages.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-material.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-route-1.5.5.js"></script>
+    <script src="library/angular-file-upload-master/js/dirPagination.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-cookies.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-sanitize.js"></script>
+
+    <!--   <link rel="stylesheet" href="../../Angular2026/angular-file-upload-master/css/angular-material.min.css"> -->
+    <!-- Angular HQMultimedia template -->
+
+    <!-- Function AngularJS Template -->
+    <script src="js-angularJs/general-ingredients/setup.js "></script>
+    <script src="js-angularJs/general-ingredients/AngularRoute.js "></script>
+    <script src="js-angularJs/general-ingredients/Data.js "></script>
+    <script src="js-angularJs/general-ingredients/theme-layout.js "></script>
+    <script src="library/angular-file-upload-master/js/ng-directive/ng-directive.js "></script>
+
+    <script src="library/angular-file-upload-master/js/hq-toast/HQ-Toast-Messenger.js "></script>
+
+
+    <!-- End function AngularJS Template -->
+    <!-- Page angularjs -->
+    <script src="js-angularJs/page/home-index.js"></script>
+    <!--  -->
+    <!-- End page angularjs -->
+
+
+
+
+
+    <!-- B4.Tags input -->
+    <!-- tags input -->
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/tags-bootstrap.css">
+    <!-- tags input -->
+    <script src="vendor/tags-bootstrap-input/js/bootstrap-tagsinput.min.js"></script>
+
+
+    <!-- Thư viện animate -->
+    <link rel="stylesheet" href="vendor/animate/animate.min.css">
+    <!-- bootstrap 5 -->
+
+
+</head>
+
+
+<body style="font-size: 15px !important;" ng-app="myApp" ng-controller="ThemeLayoutController" class=" font-basic {{cookies_layout}}">
+    <!-- Phần thông báo -->
+    <div ng-controller="NotificationController" id="toast"></div>
+    <!-- End phần thông báo -->
+    <div class="load">
+        <div class="load__img flex-align-middle">
+            <img src="source-data/loading.gif" width="100px" alt="">
+        </div>
+    </div>
+
+    <div class="top-contact">
+        <div class="top-contact-left">
+            <div class="flex ">
+                <i class="fa-solid fa-map-location"></i>
+                <p class="padding-l-5">Truong Tho - Thu Duc </p>
+            </div>
+            <div class="flex ">
+                <i class="fa-thin fa-phone-volume"></i>
+                <p class="padding-l-5">0981195878</p>
+            </div>
+        </div>
+        <div class="top-contact-right">
+            <div class="flex cursor show_box_setting">
+                <i class="fa-regular fa-sliders"></i>
+                <p class="padding-l-5">Tuỳ chỉnh theme</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div ng-view></div> -->
+    <!-- Setting -->
+    <div class="global-modal-box box-setting" ng-include="'content-admin-panel/general-ingredients/setting/setting-theme.html'" scope="" onload=""></div>
+    <!-- End setting -->
+    <!-- Box heart -->
+    <div class="global-modal-box box-posts-heart" ng-include="'content-admin-panel/general-ingredients/view-menu/box-heart.html'" scope="" onload=""></div>
+    <!-- End box heart-->
+    <!-- Box contact -->
+    <div class="global-modal-box box-contact" ng-include="'content-admin-panel/general-ingredients/view-menu/box-contact.html'" scope="" onload=""></div>
+    <!-- End box contact-->
+    <!-- Menu -->
+    <div class="box-menu  translate_Class" ng-include="'content-admin-panel/general-ingredients/view-menu/menu-home.html'" scope="" onload=""></div>
+    <!-- End menu -->
+
+
+    <div id="includeView " class=" includeView translate_Class" ng-view></div>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="translate_Class " ng-include=" 'content-admin-panel/general-ingredients/view-footer/footer.html' " scope=" " onload=" ">
+
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+</body>
+<!-- Ck editor -->
+<script src="library/ckeditor/ckeditor/ckeditor.js "></script>
+<script src="library/ckeditor/ckfinder/ckfinder.js "></script>
+<!-- End Ck editor -->
+
+<!-- HQ template -->
+<link rel="stylesheet " href="css/controller-css-element-global.css ">
+<link rel="stylesheet " href="css/controller-css-page-project.css ">
+<!--  -->
+<link rel="stylesheet " href="css/color.css ">
+<link rel="stylesheet " href="css/font.css ">
+<script src="js/menu.js "></script>
+<script src="js/js-global.js "></script>
+<script src="js/js-project.js "></script>
+<!-- HQ-js-plugin -->
+<!-- 
+<link rel="stylesheet " href="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.css ">
+<script src="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.js "></script> -->
+<!-- HQ jquery theme project -->
+
+
+
+
+<!-- gọi hàm trong hq-jquery -->
+
+
+
+<!-- js video -->
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/mediaelement-and-player.min.js ">
+</script>
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.js "></script>
+
+<!-- end js video -->
+
+<!-- pie chart -->
+<script src="vendor/pieChart/jquery.easypiechart.min.js "></script>
+<script src="vendor/pieChart/jquery.appear.min.js "></script>
+
+<!-- Before after js -->
+<link rel="stylesheet " href="vendor/after-before-twenty-twenty/css/twentytwenty.css ">
+
+<script src="vendor/after-before-twenty-twenty/js/jquery.event.move.js "></script>
+<script src="vendor/after-before-twenty-twenty/js/jquery.twentytwenty.js "></script>
+
+
+</html>
+
+
+
+
+<!-- jquery carousel bootstrap -->
+
+<!-- Function global (không thay đổi)-->
+<script>
+    // nằm trong js/js-global
+    Global_Loading();
+    Global_show_menu_small()
+    Global_Overplay_Modal();
+</script>
+<!-- function by project (có thể xoá,thay đổi) -->
+<script>
+    Project_Overplay_Modal();
+    Project_modal_box_setting();
+</script>

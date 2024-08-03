@@ -1,0 +1,653 @@
+<style>
+    .block-top {
+        height: 86px;
+        background-color: #E8E8E8;
+        margin-top: calc(var(--height--box--top) + var(--height--menu));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: var(--padding--content--posts--block--top);
+    }
+    
+    .layout-left .block-top {
+        margin-top: 0;
+    }
+    
+    .block-top-left {
+        width: 50%;
+        /* padding-left: 68px; */
+    }
+    
+    .block-top-right {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        /* padding-right: 68px; */
+    }
+    
+    .block-top-right>i {
+        padding: 5px 10px 0 10px;
+        font-size: 10px;
+    }
+    
+    .box-content-posts {
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        padding: var(--padding--content--posts);
+        margin-top: 39px;
+    }
+    /* phần left */
+    
+    .box-left-content-posts {
+        width: 70%;
+    }
+    
+    p.title-posts {
+        color: gray;
+        font-size: 14px;
+    }
+    
+    h5.category-posts {
+        margin: 15px 0;
+        font-size: 22px;
+    }
+    
+    p.text-content-posts {
+        margin: 15px 0;
+        color: gray;
+    }
+    
+    img.img-left-posts-content {
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .text-hightlight {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+    
+    .text-hightlight>i {
+        font-size: 95px;
+        padding-right: 10px;
+        color: gray;
+    }
+    
+    .text-hightlight>H6 {
+        font-size: 22px;
+    }
+    
+    .box-tag-icon-posts {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #8080803d;
+        padding-bottom: 15px;
+    }
+    
+    .box-posts-tag {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 150px);
+    }
+    
+    .tags-posts {
+        padding-right: 5px;
+        padding-bottom: 2px;
+    }
+    
+    .tag-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .tag-item>a {
+        font-weight: 400;
+        color: #0e0c0c;
+        font-size: 12px;
+        background-color: #d5d5d5;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 5px;
+        display: block;
+        margin-left: 5px;
+        transition: 0.4s;
+    }
+    
+    .tag-item>a:hover {
+        transition: 0.4s;
+        color: #efefef;
+        background-color: #101010;
+    }
+    
+    .box-posts-icon-share {
+        display: flex;
+        justify-content: flex-end;
+        width: 150px;
+    }
+    
+    .box-posts-icon-share>a>i {
+        font-size: 16px;
+        margin-left: 6px;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        border-radius: 2px;
+        color: gray;
+        transition: 0.4s;
+    }
+    
+    .box-posts-icon-share>a>i:hover {
+        font-size: 16px;
+        color: #efefef;
+        background-color: #101010;
+        transition: 0.4s;
+    }
+    
+    .box-related-posts {
+        display: flex;
+        flex-wrap: wrap;
+        --spacing: 25px;
+        --columns: 4;
+        margin-left: calc(-1 * var(--spacing));
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .box-related-posts>a {
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
+        margin-left: var(--spacing);
+    }
+    
+    img.img-related-posts {
+        width: 100%;
+        /* border-radius: 4px; */
+    }
+    
+    .one-comment {
+        display: flex;
+        margin: 15px 0 0 0;
+        border-bottom: 1px solid #80808036;
+        padding-bottom: 15px;
+    }
+    
+    .user-comment {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .user-comment img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    .content-comment {
+        width: calc(100% - 68px);
+        padding-left: 15px;
+    }
+    
+    .content-comment H6 {
+        font-size: 18px;
+    }
+    
+    .content-comment p:nth-child(2) {
+        color: #5a5757;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .content-comment p:nth-child(3) {
+        color: gray;
+        font-size: 15px;
+    }
+    
+    .title-box-comment {
+        border-top: 1px solid #80808036;
+        border-bottom: 1px solid #80808036;
+        padding: 30px 0;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    
+    .input-comment textarea {
+        overflow: auto;
+        width: 100%;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 5px;
+        color: #868686;
+        padding: 10px;
+        font-size: 14px;
+        margin: 15px 0 5px 0;
+    }
+    
+    textarea:focus-visible {
+        outline: none;
+    }
+    
+    .button-send-comment {
+        color: #fff;
+        margin: 10px 0 10px 0;
+    }
+    /* phần right */
+    
+    .box-right-content-posts {
+        width: 30%;
+        text-align: center;
+        padding-left: 20px;
+    }
+    
+    img.img-author {
+        width: 168px;
+        height: 168px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 19px 0;
+    }
+    
+    .box-icon-box-author i {
+        font-size: 18px;
+        padding: 5px;
+        color: gray;
+    }
+    
+    .box-icon-box-author {
+        margin: 15px 0;
+    }
+    
+    .box-icon-box-author i {
+        font-size: 18px;
+        padding: 5px;
+        color: gray;
+    }
+    
+    .box-latest-posts {
+        border-top: 1px solid #80808036;
+        border-bottom: 1px solid #80808036;
+        padding: 30px 0 10px 0;
+    }
+    
+    .one-latest-posts {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .one-latest-posts h6 {
+        color: gray;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .one-latest-posts p {
+        color: #a59b9b;
+    }
+    /* box banner */
+    
+    .box-baner {
+        /* border-top: 1px solid #80808036; */
+        margin: 30px 0 30px 0;
+    }
+    
+    .box-baner a img {
+        width: 91%;
+        margin-bottom: 30px;
+    }
+    /* .box-baner a:last-child {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 99px px;
+    } */
+    /* end box banner */
+    /* responsive */
+    /* @media (min-width:320px) and (max-width:543px) {} */
+    /* @media (min-width:1024px) and (max-width:1268px) {
+        
+    } */
+    
+    @media (max-width:1065px) {
+        .layout-left .block-top {
+            margin-top: 79px;
+        }
+        .box-right-content-posts {
+            width: 100%;
+            padding-left: 0 !important;
+            margin-top: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .box-author {
+            margin-top: 20px;
+        }
+        .author-description {
+            padding: 0 30px 0 30px;
+        }
+        .box-baner {
+            margin: auto;
+            width: 56%;
+            padding-top: 30px;
+        }
+        /* Bottom */
+        .box-left-content-posts {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width:768px) and (max-width:1065px) {
+        .box-right-content-posts {
+            width: 40%;
+            margin-top: 15px;
+            background-color: transparent;
+            padding-left: 15px !important;
+        }
+        .box-left-content-posts {
+            width: calc(100% - 40%);
+        }
+    }
+    
+    @media (min-width:320px) and (max-width:1023px) {
+        .layout-left .block-top-right {
+            width: 100%;
+            justify-content: flex-start;
+            padding-right: 0;
+            /* padding-left: 68px; */
+        }
+        .layout-left .block-top-left {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width:991px) {
+        .block-top-right {
+            width: 100%;
+            justify-content: flex-start;
+            padding-right: 0;
+            /* padding-left: 68px; */
+        }
+        .block-top-left {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width:767px) {
+        .box-posts-tag {
+            width: 100%;
+        }
+        .box-posts-icon-share {
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+    }
+    
+    @media (max-width:543px) {
+        .box-related-posts {
+            --columns: 2;
+        }
+        .box-related-posts>a {
+            margin-bottom: var(--spacing);
+        }
+        .box-baner {
+            margin: auto;
+            width: 91%;
+        }
+        .block-top {
+            flex-direction: column-reverse;
+        }
+        .block-top-right {
+            margin-bottom: 15px;
+        }
+        .block-top-right div:last-child {
+            display: none !important;
+        }
+    }
+</style>
+<!-- block top -->
+<div ng-model="page_data" ng-init="page_data='content-posts'" class="block-top" ng-init="top()">
+    <div class="block-top-left">
+        <H6 style="color: black;">TOOTS AND THE PRICE TAGS</H6>
+    </div>
+    <div class="block-top-right">
+        <div class="flex">
+            <a href="">
+                <p style="color: gray;"> Home</p>
+            </a>
+        </div>
+        <div class="flex" style="color: gray; align-items: center;">
+            <i class="fa-solid fa-chevron-right margin-lr-5" style="font-size: 8px;"></i>
+            <a href="">
+                <p style="text-transform: lowercase;">MAKEUP & COSMETICS</p>
+            </a>
+        </div>
+        <div class="flex" style="align-items:center ;">
+            <i class="fa-solid fa-chevron-right margin-lr-5" style="color: gray; font-size: 8px;"></i>
+            <p style="text-transform: lowercase;" class="weight-500">TOOTS AND THE PRICE TAGS</p>
+        </div>
+    </div>
+</div>
+<!-- End block top -->
+
+<!-- A.content posts -->
+<div class="box-content-posts">
+    <!-- 01.content left -->
+    <div class="box-left-content-posts">
+        <p class="title-posts">December 28, 2015 </p>
+        <H5 class="category-posts">
+            POOL BLUE LOVE
+        </H5>
+        <p class="text-content-posts">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+            delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet.
+
+        </p>
+        <img src="source-data/posts/blog-centered-image-5.jpg" alt="" class="img-left-posts-content">
+        <p class="text-content-posts">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.
+
+        </p>
+        <img src="source-data/posts/blog-centered-image-2a.jpg" alt="" class="img-left-posts-content">
+        <p class="text-content-posts">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+            ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+            delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+
+        <div class="text-hightlight">
+            <i class="fa-solid fa-quote-right"></i>
+
+            <h6>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere
+            </h6>
+        </div>
+        <p class="text-content-posts">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+            lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
+            futurum. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+
+
+        <!-- box-tag-icon -->
+        <div class="box-tag-icon-posts">
+            <div class="box-posts-tag">
+
+                <H6 class="tags-posts">TAGS:</H6>
+
+                <div class="tag-item">
+                    <a href="">SKINCAKE</a>
+                    <a href="">SKINCAKE</a>
+                    <a href="">SKINCAKE</a>
+                    <a href="">SKINCAKE</a>
+                </div>
+            </div>
+            <div class="box-posts-icon-share">
+                <a href=""><i class="fa-brands fa-facebook-f "></i></a>
+                <a href=""><i class="fa-brands fa-telegram "></i></a>
+                <a href=""> <i class="fa-brands fa-twitter "></i></a>
+                <a href=""><i class="fa-brands fa-pinterest "></i></a>
+                <a href=""> <i class="fa-solid fa-location-dot "></i></a>
+
+
+
+
+            </div>
+        </div>
+        <!-- End box-tag-icon -->
+        <!-- box RELATED POSTS: -->
+        <h6 class="margin-t-15">RELATED POSTS: </h6>
+        <div class="box-related-posts">
+            <a href="">
+                <img class="img-related-posts" src="source-data/posts/blog-centered-image-3.jpg" alt="">
+            </a>
+            <a href="">
+                <img class="img-related-posts" src="source-data/posts/blog-centered-image-8.jpg" alt="">
+            </a>
+            <a href="">
+                <img class="img-related-posts" src="source-data/posts/blog-centered-image-9.jpg" alt="">
+            </a>
+            <a href="">
+                <img class="img-related-posts" src="source-data/posts/blog-centered-image-07.jpg" alt="">
+            </a>
+        </div>
+
+        <!-- End box RELATED POSTS: -->
+        <!-- box comment -->
+        <H6 class="title-box-comment">3 COMMENTS </H6>
+        <div class="one-comment">
+            <div class="user-comment">
+                <img src="source-data/product/01.jpg" alt="">
+            </div>
+            <div class="content-comment">
+                <h6>TARA HAYNES</h6>
+                <p>December 29, 2023 </p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="box-reply cursor weight-500" style="width: 68px;">
+                    <p>Reply <i class="fa-solid fa-reply"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="one-comment">
+            <div class="user-comment">
+                <img src="source-data/product/09.jpg" alt="">
+            </div>
+            <div class="content-comment">
+                <h6>LINDSEY BRUNK</h6>
+                <p>December 24, 2023 </p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="box-reply cursor weight-500" style="width: 68px;">
+                    <p>Reply <i class="fa-solid fa-reply"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="one-comment">
+            <div class="user-comment">
+                <img src="source-data/product/07.jpg" alt="">
+            </div>
+            <div class="content-comment">
+                <h6>CHRISTEN BATSON</h6>
+                <p>December 15, 2023 </p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat.
+
+                </p>
+                <div class="box-reply cursor weight-500" style="width: 68px;">
+                    <p>Reply <i class="fa-solid fa-reply"></i></p>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- End box comment -->
+
+
+        <!-- box-viết bình luận -->
+        <div class="box-write-comment">
+            <h6 class="margin-t-15">LEAVE A COMMENT: </h6>
+            <form action="" name="form_add">
+                <!-- Content -->
+
+                <div class="input-comment">
+                    <textarea ng-model="posts.description" cols="30" rows="10" required>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident maiores delectus consectetur voluptatum facilis rem, recusandae dolore. Minus, itaque. Exercitationem molestiae possimus natus quas vitae ipsam deserunt magnam vel id.</P>
+                    </textarea>
+                </div>
+
+
+                <!-- End content -->
+
+
+                <button type="button" ng-disabled="form_add.$invalid" ng-model="page_function" ng-init="page_function='posts_add'" ng-click="upload(one_data,page_data,page_function)" class="btn btn-primary button-send-comment"><i class="fas fa-plus-circle"></i> Send Comment
+              </button>
+            </form>
+        </div>
+        <!-- End box-viết bình luận -->
+    </div>
+
+    <!-- 01.End content left -->
+    <!--02. content right -->
+    <div class="box-right-content-posts">
+        <div class="box-author">
+            <h6>ABOUT ME AND MY BLOG
+            </h6>
+            <img class="img-author" src="source-data/product/09.jpg" alt="">
+            <p class="author-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus consequuntur cupiditate magnam voluptatibus maxime ipsa totam accusantium unde nihil! Illum dolorum velit optio ex voluptatem quia porro vel id mollitia!</p>
+
+            <!-- box -icon -->
+            <div class="box-icon-box-author">
+                <a href=""><i class="fa-brands fa-facebook-f "></i></a>
+                <a href=""><i class="fa-brands fa-telegram "></i></a>
+                <a href=""> <i class="fa-brands fa-twitter "></i></a>
+                <a href=""><i class="fa-brands fa-pinterest "></i></a>
+                <a href=""> <i class="fa-solid fa-location-dot "></i></a>
+
+            </div>
+            <!-- end box icon -->
+
+            <!-- box bài viết mới nhất -->
+            <div class="box-latest-posts">
+                <h6>LATEST POSTS </h6>
+                <!-- one-LATEST POSTS -->
+                <div class="one-latest-posts">
+                    <H6>NEW SPRING 2017 COLLECTION</H6>
+                    <p>by Admin</p>
+                </div>
+                <!-- one-LATEST POSTS -->
+                <div class="one-latest-posts">
+                    <H6>PATTERNS ON THE STREETS OF LONDON</H6>
+                    <p>by Admin</p>
+                </div>
+                <!-- one-LATEST POSTS -->
+                <div class="one-latest-posts">
+                    <H6>CHIC HAIR BUN TUTORIAL</H6>
+                    <p>by Admin</p>
+                </div>
+                <!-- one-LATEST POSTS -->
+                <div class="one-latest-posts">
+                    <H6>MAC & SEPHORA HAUL</H6>
+                    <p>by Admin</p>
+                </div>
+                <!-- one-LATEST POSTS -->
+                <div class="one-latest-posts">
+                    <H6>KLOE’S FALL COLLECTION REVIEW</H6>
+                    <p>by Admin</p>
+                </div>
+            </div>
+            <!--End box bài viết mới nhất -->
+
+            <!-- box baner -->
+            <div class="box-baner">
+                <a href=""> <img src="source-data/baner/baner-2.jpg" alt=""></a>
+                <a href=""> <img class="sticky" src="source-data/baner/baner-3.jpg" alt=""></a>
+            </div>
+            <!-- End box baner -->
+        </div>
+    </div>
+    <!-- 02. End content right -->
+</div>
+<!-- A.End content posts -->

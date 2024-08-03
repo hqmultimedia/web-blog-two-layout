@@ -1,0 +1,151 @@
+<style>
+    .box-option-setting {
+        border-bottom: 1px solid #424040;
+        margin-bottom: 15px;
+    }
+    
+    input[type=radio] {
+        margin-right: 8px;
+        width: 11px;
+    }
+    
+    .form-radio-theme-color .radio-theme-color {
+        width: 100%;
+        /* background-color: cadetblue; */
+        /* background-color: #5a5656; */
+        background-color: #212828;
+        padding: 5px;
+        border-radius: 2px;
+        margin-top: 5px;
+        color: #c1b096;
+        display: flex;
+    }
+    
+    .form-radio-theme-color .radio-theme-color:last-child,
+    .form-radio-theme-color .radio-theme-color:nth-last-of-type(2) {
+        background-color: #403c3c;
+        cursor: initial;
+        color: #976b6b;
+    }
+    
+    .text-label {
+        width: calc(100% - 50px);
+    }
+    
+    .icon-label {
+        width: 50px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5px;
+    }
+    
+    .text-category-setting {
+        text-transform: uppercase;
+        font-size: 13px;
+        color: burlywood;
+    }
+    
+    .img-box-setting {
+        /* border: 1px solid #ebebeb; */
+        border-radius: 5px;
+        box-shadow: -1px 2px 18px 5px #262626;
+    }
+    
+    .radio-layout {
+        color: #99856c;
+    }
+</style>
+<div class="global-modal-content">
+    <div class="global-icon-close-modal-box">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+
+
+    <!-- color -->
+    <div class="box-option-setting">
+        <h6 class="text-category-setting">- Màu sắc</h6>
+        <i class="margin-b-15 margin-t-5 block weight-400">Color package : 11-6-2024</i>
+        <form class="form-radio-theme-color">
+
+
+            <label class="radio-theme-color cursor">
+                  <input checked type="radio"   value="color_package_no1" name="optradio"><span class="text-label">Color package 1</span> <i class="icon-label fa-solid fa-palette"></i>
+            </label>
+            <label class="radio-theme-color cursor">
+                  <input disabled type="radio" ng-model ="color_package" value="color_package_no2" ng-click="select_color_package(color_package)" name="optradio"><span class="text-label">Color package 2</span> <i class="fa-solid fa-palette icon-label"></i>
+            </label>
+            <label class="radio-theme-color cursor margin-b-30">
+                  <input disabled type="radio" ng-model ="color_package" value="color_package_no3" ng-click="select_color_package(color_package)" name="optradio"><span class="text-label">Color package 3</span> <i class="fa-solid fa-palette icon-label"></i>
+            </label>
+
+
+
+        </form>
+
+    </div>
+    <!-- carousel -->
+    <div class="margin-t-15 box-option-setting">
+        <h6 class="text-category-setting">- Giao diện carousel</h6>
+
+        <form class="form-radio-carousel">
+
+            <!-- layout-1 -->
+            <div class="margin-t-15">
+                <label class="radio-layout cursor">
+                <input type="radio" ng-model ="theme_carousel" ng-click="select_carousel(theme_carousel)"  value="off-overlay" name="optradio">Carousel Basic 
+          </label>
+
+            </div>
+            <!-- layout-2 -->
+            <div class="">
+                <label class="radio-layout cursor">
+                <input type="radio" ng-model ="theme_carousel" ng-click="select_carousel(theme_carousel)" value="carousel-animate-basic" name="optradio">Carousel animation basic
+          </label>
+
+
+            </div>
+            <!-- layout-3 -->
+            <div class="margin-b-15">
+                <label class="radio-layout cursor">
+                <input type="radio" ng-model ="theme_carousel" ng-click="select_carousel(theme_carousel)" value="show-overlay" name="optradio">Hover show text 
+          </label>
+
+
+            </div>
+
+
+
+
+        </form>
+    </div>
+    <!-- layout -->
+    <div class="box-option-setting">
+        <h6 class="text-category-setting">- Giao diện tổng quan</h6>
+
+        <form class="form-radio-layout">
+
+            <!-- layout-1 -->
+            <div class="margin-t-15">
+                <label class="radio-layout cursor">
+                <input type="radio" ng-model ="theme_layout" ng-click="select_layout(theme_layout)"  value="layout-left" name="optradio">Layout Left
+          </label>
+                <img class="img-box-setting" src="source-data/preview-project/layout-left.jpg" width="100%" alt="">
+            </div>
+            <!-- layout-2 -->
+            <div class="margin-t-15">
+                <label class="radio-layout cursor">
+                <input type="radio" ng-model ="theme_layout" ng-click="select_layout(theme_layout)" value="layout_center" name="optradio">Layout Center
+          </label>
+                <img class="img-box-setting" src="source-data/preview-project/layout-center.jpg" width="100%" alt="">
+
+            </div>
+
+
+
+        </form>
+    </div>
+
+</div>
+<Script>
+    Project_modal_box_setting();
+</Script>

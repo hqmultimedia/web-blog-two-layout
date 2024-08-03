@@ -1,0 +1,151 @@
+ /* có thể xoá */
+ 
+ #toast {
+     bottom: -10px;
+     right: 0;
+     left: 32px;
+ }
+ 
+ .toast.toast--background--success {
+     background-color: burlywood !important;
+ }
+ 
+ .toast--text--success .toast__body .toast__text {
+     color: #262626 !important;
+ }
+ 
+ .top-contact {
+     position: fixed;
+     z-index: 101;
+     top: 0;
+     left: 0;
+     background-color: #393e3e;
+     height: var(--height--box--top);
+     padding: var(--padding--box--top);
+     width: 100%;
+     color: #c3c2c2;
+     font-size: 13px;
+     text-transform: uppercase;
+     display: flex;
+     align-items: center;
+     font-weight: 600;
+ }
+ 
+ .top-contact-left {
+     display: flex;
+     /* padding-left: 68px; */
+     justify-content: flex-start;
+     width: 50%;
+ }
+ 
+ .top-contact-left>div {
+     padding-right: 15px;
+ }
+ 
+ .top-contact-right {
+     display: flex;
+     justify-content: flex-end;
+     width: 50%;
+     /* padding-right: 63px; */
+ }
+ 
+ .box-menu .box-link .ul-sidebar>li:last-of-type,
+ .box-menu .box-link .ul-sidebar>li:nth-last-of-type(2) {
+     display: none;
+ }
+ /* dành cho layout-left */
+ 
+ .layout-left .top-contact {
+     display: none;
+ }
+ 
+ .layout-left .box-menu .box-link .ul-sidebar>li:last-of-type,
+ .layout-left .box-menu .box-link .ul-sidebar>li:nth-last-of-type(2) {
+     display: block;
+ }
+ 
+ .layout-left .box-menu {
+     top: 0;
+ }
+ 
+ @media (min-width:320px) and (max-width:1065px) {
+     .box-menu .box-link .ul-sidebar>li:last-of-type,
+     .box-menu .box-link .ul-sidebar>li:nth-last-of-type(2) {
+         display: block;
+     }
+     .top-contact {
+         display: none;
+     }
+     .box-menu {
+         top: 0;
+     }
+     .carousel {
+         padding-top: calc(68px);
+     }
+ }
+ 
+ @media (min-width:320px) and (max-width:543px) {
+     .box-icon .item-icon:last-child {
+         display: none;
+     }
+     #toast {
+         bottom: 0px;
+         right: 0;
+         left: 0px;
+     }
+     .toast {
+         position: relative;
+         display: flex;
+         min-width: 100%;
+         max-width: 100% !important;
+         border-radius: 0 !important;
+         margin-top: 15px !important;
+         margin-bottom: 0px !important;
+         /* 1s là thời gian diễn ra */
+         /* 2.5s là thời gian bắt đầu diễn ra */
+         /* animation: InLeft ease .4s, FadeOut linear 1s 2.5s forwards !important; */
+         /* animation: InLeft ease .4s forwards; */
+     }
+ }
+ 
+ @media (min-width:544px) and (max-width:767px) {
+     #toast {
+         bottom: 0px;
+         right: 0;
+         left: 0px;
+     }
+     .toast {
+         position: relative;
+         display: flex;
+         min-width: 100%;
+         max-width: 100% !important;
+         border-radius: 0 !important;
+         margin-top: 15px !important;
+         margin-bottom: 0px !important;
+         /* 1s là thời gian diễn ra */
+         /* 2.5s là thời gian bắt đầu diễn ra */
+         /* animation: InLeft ease .4s, FadeOut linear 1s 2.5s forwards !important; */
+         /* animation: InLeft ease .4s forwards; */
+     }
+ }
+ 
+ @media (min-width:768px) and (max-width:991px) {
+     #toast {
+         bottom: 5px;
+         left: 5px;
+         right: 0;
+     }
+     .toast {
+         position: relative;
+         display: flex;
+         min-width: 379px;
+         max-width: 379px !important;
+         border-radius: 5px !important;
+         margin-top: 15px !important;
+         margin-bottom: 0px !important;
+         /* 1s là thời gian diễn ra */
+         /* 2.5s là thời gian bắt đầu diễn ra */
+         /* animation: InLeft ease .4s, FadeOut linear 1s 2.5s forwards !important; */
+         /* animation: InLeft ease .4s forwards; */
+     }
+ }

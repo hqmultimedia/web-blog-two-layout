@@ -1,0 +1,103 @@
+<style>
+    .pagination_by_project {
+        padding: var(--position--pagination);
+    }
+</style>
+<!-- Content -->
+
+<!-- Slide -->
+<div class=" container-fluid " ng-include=" 'content-admin-panel/general-ingredients/carousel/carousel.html' " scope=" " onload=" ">
+
+
+</div>
+
+
+<!-- End slide -->
+<div class="box-repeat-data" ng-init="getDataPagination()">
+    <div class="box-posts-content" dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize">
+        <!-- 1 -->
+        <div class="one-posts">
+            <div class="title-img">
+                <div class="title-top">
+                    <p class="item-title">{{one_data.posts_time}} </p>
+                    <a ng-click="scroll_top()" class="item-title" href="posts-demo">
+                        <h5>{{one_data.posts_name}}</h5>
+                    </a>
+                    <a class="item-title" href="">
+                        <p>{{one_data.posts_category}}</p>
+                    </a>
+                </div>
+                <!-- image -->
+                <div class="box-image-posts">
+                    <a ng-click="scroll_top()" href="posts-demo">
+                        <img class="img-posts" src="{{one_data.posts_img}}" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-posts" style="color: #797979;">
+                {{one_data.posts_content}}
+            </p>
+
+            <!-- box-bottom -->
+            <div class="box-bottom">
+                <!-- icon -->
+                <div class="box-icon-posts">
+
+                    <div class="item-icon-posts">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="item-icon-posts">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="item-icon-posts">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </div>
+                    <div class="item-icon-posts">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                    <div class="item-icon-posts">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <!-- <div class="item-icon-posts" style="color:brown;">
+                        <i class="fa-solid fa-heart"></i>
+                    </div> -->
+                </div>
+                <!-- button reading -->
+                <a ng-click="scroll_top()" class="button-reading" href="posts-demo">
+
+                    <p>CONTINUE READING</p>
+
+
+                </a>
+                <!-- box-comment -->
+                <div class="box-comment">
+                    <p>3 COMMENTS</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- End content -->
+
+<!-- 02.4 Khối pagination -->
+<div class="pagination_by_project" ng-include="'content-admin-panel/general-ingredients/view-pagination/pagination.html'" scope="" onload=""></div>
+<!-- 02.4 End khối pagination -->
+<!-- 
+<script>
+    $('.test_ok').click(function() {
+
+
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0
+        }, 0);
+        // alert('ok');
+
+
+    });
+</script> -->

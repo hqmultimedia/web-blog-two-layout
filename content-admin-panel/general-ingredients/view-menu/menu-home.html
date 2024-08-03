@@ -1,0 +1,527 @@
+<style>
+    .box-menu-search {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 39px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: white;
+        height: var(--height--menu);
+        display: flex;
+        align-items: center;
+        transition: 1s;
+        box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+    }
+    
+    .box-menu-search.show {
+        opacity: 1;
+        visibility: visible;
+        top: 39px;
+        transition: 0.4s;
+    }
+    
+    .box-menu-search form input:focus,
+    .box-menu-search form button:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    .box-menu-search form input {
+        border: none;
+        font-size: 19px;
+    }
+    
+    .icon-action-search {
+        transition: 0.4s;
+        font-size: 20px;
+    }
+    
+    .icon-action-search:hover {
+        transition: 0.4s;
+        transform: scale(1.2);
+    }
+</style>
+
+<style>
+    .content-project-more .img-project-more {
+        width: 100%;
+        /* height: 339px; */
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+        overflow: scroll;
+        border-radius: 5px;
+        margin-top: 5px;
+        cursor: pointer;
+        box-shadow: 1px 2px 20px 9px #202020ad;
+    }
+    
+    @media (min-width:320px) and (max-width:1065px) {
+        .box-menu-search {
+            top: 0 !important;
+        }
+        .content-project-more .img-project-more {
+            width: 100%;
+            height: 279px;
+            padding-left: 26px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .content-project-more .items-drop {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+        }
+        .content-project-more .items-drop .link-scroll::after {
+            content: '';
+            border-bottom: none !important;
+        }
+        .content-project-more .items-drop:last-child .img-project-more {
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media (min-width:991px) and (max-width:1065px) {
+        .content-project-more .img-project-more {
+            width: 55%;
+            height: 295px;
+        }
+        .content-project-more .items-drop {
+            align-items: flex-start;
+        }
+    }
+</style>
+
+<div class="logo">
+    <a href="home" ng-click="scroll_top()">
+        <img src="source-data/logo/logo_light.png" alt="  ">
+    </a>
+</div>
+<div class="menu-small-icon"><i class="fa-light fa-bars"></i></div>
+<div class="box-link-icon">
+    <div class="box-link ">
+        <ul class="ul-sidebar">
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="https://hqmultimedia.github.io/hq-cv">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link">CV</span>
+                        </a>
+                        <!-- icon-right -->
+                        <!-- <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div> -->
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="home">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link">Home</span>
+                        </a>
+                        <!-- icon-right -->
+                        <!-- <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div> -->
+                    </div>
+
+                </div>
+            </li>
+
+
+            <!--  -->
+
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link">Project More</span>
+                        </a>
+                        <!-- icon-right -->
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="scroll_content drop-center content-project-more ">
+
+                        <!-- item 1 -->
+                        <div class="items-drop">
+
+                            <a href="https://hqmultimedia.github.io/web-app-admin">
+                                <img class="img-project-more" src="source-data/preview-project/project-admin.png" alt="">
+                            </a>
+                            <a href="https://hqmultimedia.github.io/web-app-admin" class="link-scroll uppercase text-center margin-t-5 weight-500"><i class="fa-solid fa-circle icon-link-dropdown"></i>Web app Admin </a>
+
+                        </div>
+                        <!-- item 2 -->
+                        <div class="items-drop">
+
+                            <a href="https://hqmultimedia.github.io/web-information-two-layout">
+                                <img class="img-project-more" src="source-data/preview-project/project-infomation-two-layout.png" alt="">
+                            </a>
+                            <a href="https://hqmultimedia.github.io/web-information-two-layout" class="link-scroll uppercase text-center margin-t-5 weight-500"><i class="fa-solid fa-circle icon-link-dropdown"></i>Web information two layout </a>
+
+                        </div>
+                        <!-- item 03 -->
+                        <div class="items-drop">
+
+                            <a href="https://hqmultimedia.github.io/web-posts-layout-mansory">
+                                <img class="img-project-more" src="source-data/preview-project/project-posts-mansory.png" alt="">
+                            </a>
+                            <a href="https://hqmultimedia.github.io/web-posts-layout-mansory" class="link-scroll uppercase text-center margin-t-5 weight-500"><i class="fa-solid fa-circle icon-link-dropdown"></i>Web posts mansory </a>
+
+                        </div>
+                        <!-- item 04 -->
+                        <!-- <div class="items-drop">
+
+                            <a href="https://hqmultimedia.github.io/web-blog-two-layout">
+                                <img class="img-project-more" src="source-data/preview-project/project-posts-two-layout.png" alt="">
+                            </a>
+                            <a href="https://hqmultimedia.github.io/web-blog-two-layout" class="link-scroll uppercase text-center margin-t-5 weight-500"><i class="fa-solid fa-circle icon-link-dropdown"></i>Web posts two layout </a>
+
+                        </div> -->
+                        <!-- item 05 -->
+                        <div class="items-drop">
+
+                            <a href="https://hqmultimedia.github.io/home-fashion">
+                                <img class="img-project-more" src="source-data/preview-project/project-web-shop.png" alt="">
+                            </a>
+                            <a href="https://hqmultimedia.github.io/home-fashion" class="link-scroll uppercase text-center margin-t-5 weight-500"><i class="fa-solid fa-circle icon-link-dropdown"></i>Web Home fashion </a>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+            </li>
+
+            <!-- new code -->
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link">Portfolio Full</span>
+                        </a>
+                        <!-- icon-right -->
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="scroll_content drop-center ">
+
+                        <!-- item 1 -->
+                        <!-- <div class="items-drop">
+                <a href="https://hqmultimedia.github.io/hq-web-project" class="link-scroll"><i class="fa-solid fa-circle icon-link-dropdown"></i>Thiết kế Web (FullStack)</a>
+                <div class="owl-carousel owl-theme  ">
+                    <div class="product-highlight">
+                        <a href="https://hqmultimedia.github.io/hq-web-project">
+                            <img class="round-large img-product-highlight" src="source-data/web.png" alt="">
+
+
+
+                        </a>
+
+                        <a href="https://hqmultimedia.github.io/hq-web-project" class="margin-t-15 block"> <button class="btn btn-info margin-t-5">Đi đến dự án</button></a>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div> -->
+
+                        <!-- item 3 -->
+                        <div class="items-drop">
+                            <a href="https://hqmultimedia.github.io/hq-image-editor-project" class="link-scroll"><i class="fa-solid fa-circle icon-link-dropdown"></i>Chỉnh sửa ảnh</a>
+                            <div class="product-highlight">
+                                <a href="https://hqmultimedia.github.io/hq-image-editor-project">
+                                    <img class="round-large img-product-highlight" src="source-data/chinhsuaanh.jpg" alt="">
+
+
+                                    <!-- <h6 class="margin-t-15">Edit Image Project</h6> -->
+
+                                </a>
+                                <a href="https://hqmultimedia.github.io/hq-image-editor-project" class="margin-t-15 block"> <button class="btn btn-info margin-t-5">Đi đến dự án</button></a>
+
+                            </div>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="items-drop">
+                            <a href="https://hqmultimedia.github.io/hq-poster-project" class="link-scroll"><i class="fa-solid fa-circle icon-link-dropdown"></i>Thiết kế Poster</a>
+                            <div class="product-highlight">
+                                <a href="https://hqmultimedia.github.io/hq-poster-project">
+                                    <img class="round-large img-product-highlight" src="source-data/Posterthammyvien-02.jpg" alt="">
+
+
+
+                                </a>
+                                <a href="https://hqmultimedia.github.io/hq-poster-project" class="margin-t-15 block"> <button class="btn btn-info margin-t-5">Đi đến dự án</button></a>
+
+                            </div>
+                        </div>
+                        <!-- item 04 -->
+                        <div class="items-drop">
+                            <a href="" class="link-scroll"><i class="fa-solid fa-circle icon-link-dropdown"></i>Dựng Phim</a>
+                            <div class="product-highlight">
+                                <a href="">
+                                    <img class="round-large img-product-highlight" src="source-data/update.jpg" alt="">
+
+
+
+                                    <h6 class="margin-t-15">Đang chờ cập nhật</h6>
+
+                                </a>
+                                <!-- <p>$10.00</p>
+                    <button class="btn btn-primary margin-t-5">Buy Package</button> -->
+                            </div>
+                        </div>
+                        <!-- item 05 -->
+                        <div class="items-drop">
+                            <a href="" class="link-scroll"><i class="fa-solid fa-circle icon-link-dropdown"></i>Thiết kế tạp chí</a>
+                            <div class="product-highlight">
+                                <a href="">
+                                    <img class="round-large img-product-highlight" src="source-data/update.jpg" alt="">
+
+
+                                    <h6 class="margin-t-15">Đang chờ cập nhật</h6>
+
+                                </a>
+
+                                <!-- <button class="btn btn-primary margin-t-5">Buy Package</button> -->
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </li>
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="#">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link">Portfolio Basic</span>
+                        </a>
+                        <!-- icon-right -->
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="scroll_content">
+                        <!-- link cấp 2 -->
+                        <!-- <div class="items-drop icon-items-drop">
+                <i class="fa-solid fa-circle icon-link-dropdown"></i>
+                <a href="https://hqmultimedia.github.io/hq-poster-project" class="link-scroll">Thiết kế Poster</a>
+
+            </div> -->
+                        <!-- link cấp 2 -->
+                        <div class="items-drop icon-items-drop">
+                            <i class="fa-solid fa-circle icon-link-dropdown"></i>
+                            <a href="https://hqmultimedia.github.io/hq-web-project" class="link-scroll">Thiết kế Web (Full-Stack)</a>
+
+                        </div>
+
+                        <!-- link cấp 2 -->
+                        <div class="items-drop icon-items-drop">
+                            <i class="fa-solid fa-circle icon-link-dropdown"></i>
+                            <a href="" class="link-scroll"> Tạp chí ( chờ update )</a>
+
+
+                        </div>
+                        <!-- link cấp 2 -->
+                        <div class="items-drop icon-items-drop">
+                            <i class="fa-solid fa-circle icon-link-dropdown"></i>
+                            <a href="https://hqmultimedia.github.io/hq-image-editor-project" class="link-scroll"> Chỉnh sửa ảnh</a>
+
+                        </div>
+                        <!-- link cấp 2 -->
+                        <div class="items-drop icon-items-drop">
+                            <i class="fa-solid fa-circle icon-link-dropdown"></i>
+                            <a href="" class="link-scroll"> Dựng phim ( chờ update )</a>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </li>
+            <!-- End new code -->
+
+            <!--  -->
+
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title show_box_setting ">
+                        <a href="">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link"><i class="fa-solid fa-sliders"></i> Tuỳ chỉnh theme</span>
+                        </a>
+                        <!-- icon-right -->
+                        <!-- <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div> -->
+                    </div>
+
+                </div>
+            </li>
+            <li class="sidebar-link">
+                <div class="box_scroll">
+                    <div class="scroll_title ">
+                        <a href="">
+                            <!-- <i class="fa-light fa-sliders-up padding-r-5"></i> -->
+                            <span class="title-link"><i class="fa-solid fa-id-card"></i> Liên hệ : 0981195878</span>
+                        </a>
+                        <!-- icon-right -->
+                        <!-- <div class="icon-dropdown">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div> -->
+                    </div>
+
+                </div>
+            </li>
+
+
+        </ul>
+        <!-- <ul>
+            <a href="https://kloe.qodeinteractive.com/blog-centered/">
+                <li class="">CV</li>
+            </a>
+            <a href="https://kloe.qodeinteractive.com/blog-centered/">
+                <li class="selected">Layout Center</li>
+            </a>
+    
+            <a href="https://kloe.qodeinteractive.com/blog-masonry/">
+                <li>Layout Masonry</li>
+    
+            </a>
+    
+            <a href="https://kloe.qodeinteractive.com/chic-hair-bun-tutorial/">
+                <li>One Posts</li>
+    
+    
+            </a>
+    
+    
+        </ul> -->
+    </div>
+    <div class="box-icon">
+        <div class="item-icon">
+            <i class="fa-sharp fa-light fa-magnifying-glass show_box_search"></i>
+
+        </div>
+        <div class="item-icon flex">
+            <!-- <i class="fa-regular fa-cart-shopping"></i> -->
+            <div class="show_box_heart flex" style="align-items:center ;">
+                <i class="fa-solid fa-heart" style="color: brown;"></i>
+                <span class="padding-l-5" style="font-size: 13px;">(10)</span>
+            </div>
+            <!-- <span class="item-cart">9+</span> -->
+
+
+        </div>
+        <div class="item-icon show_box_contact">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+    </div>
+
+    <!-- box search -->
+    <div class="box-menu-search">
+        <form class="relative margin-r-15" action="" style="width: 100%;">
+
+            <input type="text" class="form-control edit " placeholder="Search...">
+
+
+
+            <div class="flex right-middle">
+                <button style="height: 95%;" type="button" class="btn "><i class="fas fa-paper-plane icon-action-search"></i></button>
+                <button style="height: 95%;" type="button" class="btn "><i class="close_box_search fa-solid fa-xmark icon-action-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- end box search -->
+
+</div>
+
+
+
+<!-- js menu small -->
+<script>
+    $('.menu-small-icon').click(function() {
+        $('.box-link').toggleClass('show-menu-small');
+        var header = $('.box-link');
+
+        // setTimeout(function() {
+        //     header.toggleClass('fix-height-box-link');
+        // }, 500);
+
+    });
+</script>
+<!-- end js menu small -->
+<script>
+    show_scroll_content();
+</script>
+
+
+
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        merge: true,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        nav: true,
+        // khi di chuột slide sẽ ngưng chuyển
+        autoplayHoverPause: true,
+        // thời gian trượt khi ở chế độ auto ( độ mượt khi chuyển)
+        autoplaySpeed: 1500,
+        // thời gian trượt khi click ( độ mượt khi chuyển) 
+        navSpeed: 1000,
+        // thời gian chuyển 1 slide khi ở chế độ auto
+        autoplayTimeout: 5000,
+
+
+
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            543: {
+                items: 2
+            },
+            767: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            },
+            1065: {
+                items: 1
+            }
+        }
+    })
+</script>
+
+<Script>
+    Project_modal_box_setting();
+    Project_modal_box_posts_heart();
+    Project_modal_box_contact();
+</Script>

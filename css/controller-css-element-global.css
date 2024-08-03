@@ -1,0 +1,150 @@
+/* css include */
+
+@import url(element-global/setting/setting-theme.css);
+@import url(element-global/setting/global-modal-box.css);
+@import url(element-global/carousel/carousel.css);
+@import url(element-global/menu/menu.css);
+@import url(element-global/menu/menu-layout-left.css);
+@import url(element-global/footer/footer.css);
+.load__img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99997;
+    background-color: #191919;
+}
+
+.layout-left {
+    /* menu */
+    --height--box--top: 39px;
+    --height--menu: 79px;
+    --padding--box--menu: 0 69px 0 69px;
+    /* content */
+    --padding--content--posts--block--top: 0 45px;
+    --padding--content--home: 0 calc(45px);
+    --padding--content--posts: 0 45px;
+    --position--pagination: 0 45px 0 0;
+    /* footer */
+    --padding--box--footer: 0 45px 0 45px;
+    --height--footer--top: 355px;
+    --height--footer--bottom: 60px;
+}
+
+.layout_center {
+    /* menu */
+    --height--box--top: 39px;
+    --padding--box--top: 0 69px 0 69px;
+    --height--menu: 79px;
+    --padding--box--menu: 0 69px 0 69px;
+    /* content */
+    --padding--content--home: 0 300px;
+    --padding--content--posts--block--top: 0 69px;
+    --padding--content--posts: 0 69px;
+    --position--pagination: 0 300px;
+    /* footer */
+    --padding--box--footer: 0 69px 0 69px;
+    --height--footer--top: 355px;
+    --height--footer--bottom: 60px;
+}
+
+
+/* điểm thay đổi menu là 1065px */
+
+
+/* vì chuyển đổi thuộc tính position padding box menu ở màn hình dưới 1065px sẽ ko dc sử dụng */
+
+@media (min-width: 1066px) and (max-width: 1290px) {
+    .layout_center {
+        --padding--content--home: 0 240px;
+        --position--pagination: 0 240px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1065px) {
+    .layout_center {
+        --padding--content--home: 0 150px;
+        --position--pagination: 0 150px;
+        --postition--button--menu: 62px;
+        --postition--box-icon: 62px;
+        --padding--box-ul: 62px;
+        --padding--box--footer: 0 62px 0 62px;
+    }
+    .layout-left {
+        --padding--content--posts--block--top: 0 85px;
+        --padding--content--home: 0 85px;
+        --padding--content--posts: 0 85px;
+        --position--pagination: 0 85px;
+        --postition--button--menu: 85px;
+        --postition--box-icon: 85px;
+        --padding--box-ul: 85px;
+        --padding--box--footer: 0 85px 0 85px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .layout_center {
+        --padding--content--home: 0 62px;
+        --padding--content--posts: 0 62px;
+        --position--pagination: 0 62px;
+        --postition--button--menu: 62px;
+        --postition--box-icon: 62px;
+        --padding--box-ul: 62px;
+        --padding--box--footer: 0 62px 0 62px;
+    }
+    .layout-left {
+        --padding--content--home: 0 62px;
+        --position--pagination: 0 62px;
+        --postition--button--menu: 62px;
+        --postition--box-icon: 62px;
+        --padding--box-ul: 62px;
+        --padding--box--footer: 0 62px 0 62px;
+    }
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+    .layout_center {
+        --padding--content--posts--block--top: 0 50px;
+        --padding--content--home: 0 50px;
+        --padding--content--posts: 0 50px;
+        --position--pagination: 0 50px;
+        --postition--button--menu: 50px;
+        --postition--box-icon: 50px;
+        --padding--box-ul: 50px;
+        --padding--box--footer: 0 50px 0 50px;
+    }
+    .layout-left {
+        --padding--content--home: 0 50px;
+        --position--pagination: 0 50px;
+        --postition--button--menu: 50px;
+        --postition--box-icon: 50px;
+        --padding--box-ul: 50px;
+        --padding--box--footer: 0 50px 0 50px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 543px) {
+    .layout_center {
+        --padding--content--home: 0 15px;
+        --padding--content--posts--block--top: 0 15px;
+        --padding--content--posts: 0 15px;
+        --position--pagination: 0 15px;
+        --postition--button--menu: 15px;
+        --postition--box-icon: 15px;
+        --padding--box-ul: 15px;
+        --padding--box--footer: 0 15px 0 15px;
+    }
+    .layout-left {
+        --padding--content--home: 0 15px;
+        --padding--content--posts--block--top: 0 15px;
+        --padding--content--posts: 0 15px;
+        --position--pagination: 0 15px;
+        --postition--button--menu: 15px;
+        --postition--box-icon: 15px;
+        --padding--box-ul: 15px;
+        --padding--box--footer: 0 15px 0 15px;
+    }
+}

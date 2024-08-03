@@ -1,0 +1,270 @@
+/* box contact */
+
+.global-modal-box.box-contact {
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.4s;
+}
+
+.global-modal-box.box-contact.show {
+    transform: translateX(0%);
+    transition: 0.4s;
+}
+
+
+/* end box contact */
+
+
+/* box setting */
+
+.global-modal-box.box-setting {
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.4s;
+}
+
+.global-modal-box.box-setting.show {
+    transform: translateX(0%);
+    transition: 0.4s;
+}
+
+
+/* end box setting */
+
+
+/* phần box yêu thích new code */
+
+.global-modal-box.box-posts-heart {
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.4s;
+}
+
+.global-modal-box.box-posts-heart.show {
+    transform: translateX(0%);
+    transition: 0.4s;
+}
+
+
+/* End phần box yêu thích new code */
+
+
+/* phần box yêu thích */
+
+.one-notification-heart {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px solid #80808021;
+    /* padding-bottom: 10px; */
+    padding: 10px;
+}
+
+.content-notification-heart {
+    width: calc(100% - 70px - 20px);
+    padding-left: 15px;
+}
+
+a .img-data-heart {
+    width: 86px;
+    height: 102px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+.content-notification-heart p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    color: burlywood;
+}
+
+.content-notification-heart p:nth-child(2) {
+    font-size: 10px;
+}
+
+.delete-favorite {
+    padding: 6px;
+    color: white;
+    font-size: 13px;
+    width: 139px;
+    text-align: center;
+    margin-top: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #191919;
+    transition: 0.4s;
+}
+
+.delete-favorite:hover {
+    background-color: brown;
+    transition: 0.4s;
+}
+
+
+/* End phần box yêu thích */
+
+
+/* box-contact */
+
+@keyframes translateLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-339px);
+    }
+}
+
+.translate-left {
+    /* animation-name: translateLeft; */
+    animation: translateLeft 0.4s forwards;
+}
+
+@keyframes translateinitial {
+    0% {
+        transform: translateX(-339px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.translate-initial {
+    /* animation-name: translateinitial; */
+    animation: translateinitial 0.4s forwards;
+}
+
+
+/* setting cho các trình duyệt */
+
+
+/* Hien thi cho Firefox */
+
+@-moz-keyframes translateLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-339px);
+    }
+}
+
+@-moz-keyframes translateinitial {
+    from {
+        transform: translateX(-339px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Hien thi cho Safari and Chrome */
+
+@-webkit-keyframes translateLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-339px);
+    }
+}
+
+@-webkit-keyframes translateinitial {
+    from {
+        transform: translateX(-339px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Hien thi cho Opera */
+
+@-o-keyframes translateLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-339px);
+    }
+}
+
+@-o-keyframes translateinitial {
+    from {
+        transform: translateX(-339px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* End setting cho các trình duyệt */
+
+.logo-box-contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-box-contact img {
+    height: 68px;
+}
+
+.text-box-contact {
+    color: #a39595;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.img-box-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.img-box-contact img {
+    height: 200px;
+    width: 95%;
+    object-fit: cover;
+    margin: 15px 0 15px 0;
+    object-position: top;
+}
+
+.box-menu-contact {
+    margin: 10px 0;
+}
+
+.box-menu-contact ul {
+    display: flex;
+    justify-content: center;
+}
+
+.box-menu-contact ul li {
+    padding: 0px 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.box-icon-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.box-icon-contact i {
+    padding: 8px;
+    font-size: 21px;
+}
+
+
+/*End box-contact */
+
+@media (min-width:320px) and (max-width:400px) {
+    .box-heart {
+        width: 95%;
+    }
+}

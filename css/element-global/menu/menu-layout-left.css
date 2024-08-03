@@ -1,0 +1,434 @@
+                /* Phần menu  */
+                /* Father box : menu */
+                
+                .layout-left .box-menu {
+                    width: 291px;
+                    height: 100vh;
+                    padding: 0;
+                    display: block;
+                }
+                /* Children box : logo */
+                
+                .layout-left .box-menu .logo {
+                    height: var(--height--menu);
+                    text-align: center;
+                }
+                /* End children box : logo */
+                /* Father_box : chứa ul link và icon bên phải  */
+                
+                .layout-left .box-link-icon {
+                    flex-direction: column-reverse;
+                }
+                /* Children_box : box link */
+                
+                .layout-left .box-menu .box-link {
+                    width: 100%;
+                    padding-left: var(--padding--box-ul);
+                }
+                
+                .layout-left .box-menu .box-link ul.ul-sidebar {
+                    display: block;
+                }
+                
+                .layout-left .box-menu .box-link ul.ul-sidebar>li {
+                    padding: 0 0 0 15px;
+                    position: relative;
+                }
+                
+                .layout-left .items-drop {
+                    background-color: #262626;
+                    color: #c5b5b5;
+                    border-color: #3e3a3a;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                }
+                
+                .layout-left .items-drop:hover {
+                    color: burlywood;
+                }
+                
+                .layout-left .sidebar-link .scroll_content {
+                    left: 0px;
+                    top: 0;
+                    transition: 0.4s;
+                }
+                
+                .layout-left .sidebar-link:hover .scroll_content {
+                    left: 291px;
+                    top: 0 !important;
+                    transition: 0.4s;
+                }
+                
+                .layout-left .scroll_content .items-drop:hover .scroll_content_2 {
+                    left: 100%;
+                }
+                
+                .layout-left .scroll_content_2 .items-drop {
+                    border-left: 1px solid #5e5656;
+                }
+                
+                .layout-left .scroll_content_2 .items-drop:hover {
+                    background-color: #3a3939;
+                    color: #c5b5b5 !important;
+                }
+                /* dành cho dropdown center */
+                
+                .layout-left li.sidebar-link .scroll_content.drop-center {
+                    position: fixed;
+                    width: calc(100vmax - 291px) !important;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    left: -100%;
+                    top: 0 !important;
+                    transition: 0.7s;
+                }
+                
+                .layout-left .sidebar-link:hover .scroll_content.drop-center {
+                    left: 291px;
+                    transition: 0.7s;
+                }
+                
+                .layout-left .sidebar-link:hover .icon-dropdown {
+                    transform: translateY(-50%) rotate(-90deg);
+                    transition: 0.5s;
+                }
+                /* end dropdown center */
+                /* end dropdown */
+                
+                .layout-left .box-menu .box-link ul.ul-sidebar>li .box_scroll .scroll_title a {
+                    display: block;
+                    width: 100%;
+                }
+                
+                .layout-left .box-menu .box-link ul.ul-sidebar>li .box_scroll .scroll_title {
+                    padding: 15px 0;
+                }
+                
+                .layout-left .box-menu .box-link ul.ul-sidebar>li .box_scroll .scroll_title .icon-dropdown {
+                    right: 14px;
+                }
+                /* End children_box : box link */
+                /* children_box : box icon phần input tìm kiếm */
+                
+                .layout-left .box-menu .box-menu-search {
+                    position: initial;
+                    opacity: 1;
+                    visibility: visible;
+                    width: calc(100% - 30px);
+                    height: auto;
+                    display: block;
+                    margin: 15px 15px 0 15px;
+                    transform: translateY(-10px);
+                    background-color: transparent;
+                }
+                
+                .layout-left .box-menu .box-menu-search .icon-action-search {
+                    color: white;
+                }
+                
+                .layout-left .box-menu .box-menu-search form input {
+                    font-size: 15px;
+                    background-color: #4a363686;
+                    color: white;
+                }
+                
+                .layout-left .box-menu .box-menu-search form button:last-child {
+                    display: none;
+                }
+                /* children_box : box icon phần input tìm kiếm */
+                /* children_box : box icon*/
+                
+                .layout-left .box-menu .box-icon {
+                    display: none;
+                    right: var(--postition--box-icon);
+                }
+                
+                .layout-left .menu-small-icon {
+                    left: var(--postition--button--menu) !important;
+                }
+                /* slide */
+                
+                .layout-left .carousel {
+                    /* padding-left: 291px; */
+                    padding-top: 0px;
+                }
+                /* .layout-left ol.carousel-indicators {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                
+                .layout-left .setting-prev-bootstrap {
+                    left: 306px !important;
+                } */
+                /* End slide */
+                /* content */
+                /* css mặc định không xoá */
+                
+                .layout-left .includeView {
+                    padding-left: 291px;
+                    padding-right: 0px;
+                }
+                
+                .layout-left .box-repeat-data {
+                    display: flex;
+                    flex-wrap: wrap;
+                    --spacing: 25px;
+                    --columns: 4;
+                    margin-left: calc(-1 * var(--spacing));
+                    margin-top: 36px;
+                    padding: var( --padding--content--home);
+                }
+                
+                .layout-left .box-posts-content {
+                    width: calc(calc(100% / var(--columns)) - var(--spacing) - 0px);
+                    margin-left: var(--spacing);
+                    margin-bottom: var(--spacing);
+                    /* padding: 15px; */
+                    margin-top: 0;
+                    margin-right: 0;
+                }
+                
+                .layout-left .box-posts-content .one-posts {
+                    padding: 0;
+                }
+                
+                .layout-left .box-posts-content .one-posts .title-img {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+                
+                .layout-left .box-posts-content .one-posts .box-image-posts {
+                    height: 255px;
+                }
+                
+                .layout-left .box-posts-content .one-posts .box-comment {
+                    display: none;
+                }
+                
+                .layout-left .box-posts-content .one-posts .box-icon-posts {
+                    display: none;
+                }
+                
+                .layout-left .box-posts-content .one-posts .title-top {
+                    padding: 0;
+                }
+                
+                .layout-left .box-posts-content .one-posts .item-title:nth-child(3) {
+                    display: none;
+                }
+                
+                .layout-left .box-posts-content .one-posts .item-title:nth-child(1) {
+                    display: none;
+                }
+                
+                .layout-left .box-posts-content .one-posts .item-title:nth-child(2) H5 {
+                    font-size: 16px !important;
+                    text-align: left;
+                    display: -webkit-box;
+                    max-width: 100%;
+                    height: 60px;
+                    margin: 0 auto;
+                    /* line-height: 1; */
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                
+                .layout-left .box-posts-content .one-posts .text-posts {
+                    text-align: left;
+                    text-align: left;
+                    display: -webkit-box;
+                    max-width: 100%;
+                    height: 68px;
+                    margin: 10px 0 10px 0;
+                    font-size: 14px;
+                    line-height: 1.2;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                
+                .layout-left .box-posts-content .a.button-reading {
+                    width: 100%;
+                }
+                
+                .layout-left .box-bottom a.button-reading>p {
+                    background-color: transparent;
+                    color: black;
+                    font-weight: 500;
+                    text-align: left;
+                    padding: 0;
+                }
+                /* phần phân trang */
+                
+                .layout-left .pagination_by_project {
+                    /* padding: 0 17px 0 0; */
+                    padding: var( --position--pagination);
+                }
+                
+                .layout-left .pagination {
+                    margin: 0;
+                }
+                /* End phần phân trang */
+                /* Footer */
+                
+                .layout-left footer {
+                    padding-left: 291px;
+                }
+                /* End footer */
+                /* Responsive */
+                
+                @media (min-width:1066px) and (max-width:1279px) {
+                    /* content */
+                    .layout-left .box-repeat-data {
+                        --columns: 3;
+                        margin-top: 39px;
+                    }
+                    /* .layout-left .box-posts-content {
+                        padding: 0 15px 0 15px;
+                    } */
+                    .layout-left .box-bottom {
+                        padding-bottom: 10px;
+                    }
+                    /* footer */
+                    .layout-left .footer-top {
+                        --columns: 2;
+                        height: auto;
+                        padding-bottom: 15px;
+                    }
+                    .layout-left .block-top-right {
+                        width: 100%;
+                        justify-content: flex-start;
+                        padding-right: 0;
+                    }
+                    .layout-left .block-top-left {
+                        width: 100%;
+                    }
+                }
+                
+                @media (min-width:991px) and (max-width:1065px) {
+                    /* content */
+                    .layout-left .box-repeat-data {
+                        --columns: 4;
+                        margin-top: 39px;
+                    }
+                }
+                
+                @media (min-width:320px) and (max-width:1065px) {
+                    .layout-left .box-menu {
+                        height: 79px;
+                    }
+                    .layout-left .box-menu .box-icon {
+                        display: flex;
+                    }
+                    .layout-left .box-menu .box-menu-search form button:last-child {
+                        display: block;
+                    }
+                    /* .layout-left .box-menu .box-link {
+                        padding-left: 15px !important;
+                    } */
+                    .layout-left .box-menu .box-menu-search {
+                        position: fixed;
+                        width: 100%;
+                        left: 0;
+                        top: -100%;
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: white;
+                        height: var(--height--menu);
+                        display: flex;
+                        align-items: center;
+                        transition: 1s;
+                        box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+                        margin: 0;
+                        transform: none;
+                    }
+                    .layout-left .box-menu-search.show {
+                        opacity: 1;
+                        visibility: visible;
+                        top: 0;
+                        transition: 0.4s;
+                    }
+                    .layout-left .box-menu-search form input:focus,
+                    .layout-left .box-menu-search form button:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    .layout-left .box-menu-search form input {
+                        border: none;
+                        font-size: 19px !important;
+                        background-color: transparent !important;
+                        color: #262626 !important;
+                    }
+                    .layout-left .icon-action-search {
+                        transition: 0.4s;
+                        font-size: 20px;
+                        color: #262626 !important;
+                    }
+                    .layout-left .icon-action-search:hover {
+                        transition: 0.4s;
+                        transform: scale(1.2);
+                    }
+                    /* phần dropdown center */
+                    .layout-left li.sidebar-link .scroll_content.drop-center {
+                        /* width: calc(100vmax - 100px) !important; */
+                        width: 100% !important;
+                    }
+                    /* End phần dropdown center */
+                    /* css mặc định không xoá */
+                    .layout-left .includeView {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                    /* css mặc định ko xoá */
+                    .layout-left footer {
+                        padding-left: 0;
+                    }
+                }
+                
+                @media (min-width:768px) and (max-width:991px) {
+                    .layout-left .box-repeat-data {
+                        --columns: 3;
+                    }
+                    .layout-left .box-posts-content .one-posts .box-image-posts {
+                        height: 319px;
+                    }
+                }
+                
+                @media (min-width:544px) and (max-width:767px) {
+                    /* content */
+                    .layout-left .box-repeat-data {
+                        --columns: 2;
+                    }
+                    .layout-left .box-posts-content .one-posts .box-image-posts {
+                        height: 319px;
+                    }
+                    .layout-left .box-bottom a.button-reading>p {
+                        width: auto;
+                    }
+                }
+                
+                @media (min-width:320px) and (max-width:543px) {
+                    .layout-left .box-repeat-data {
+                        --columns: 1;
+                    }
+                    .layout-left .box-posts-content .one-posts .box-image-posts {
+                        height: 539px;
+                    }
+                    .layout-left .box-bottom a.button-reading>p {
+                        width: auto;
+                    }
+                    .layout-left .box-posts-content .one-posts .text-posts {
+                        margin: 0 0 5px 0;
+                    }
+                    .layout-left .box-posts-content .one-posts .item-title:nth-child(2) H5 {
+                        height: auto;
+                    }
+                    /* footer */
+                    .layout-left .footer-top {
+                        --columns: 1;
+                    }
+                }
+                /* End Responsive */

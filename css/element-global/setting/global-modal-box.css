@@ -1,0 +1,63 @@
+  /* icon close */
+  
+  .project-icon-close-modal-box,
+  .global-icon-close-modal-box {
+      font-size: 23px;
+      color: white;
+      position: fixed;
+      right: 15px;
+      top: 5px;
+      cursor: pointer;
+  }
+  /* end icon */
+  /* phần box background global */
+  
+  .global_bg_overlay,
+  .bg_overlay_box_contact {
+      background-color: #2626269e;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      visibility: hidden;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transition: 0.4s;
+      z-index: 102;
+  }
+  
+  .global_bg_overlay.show,
+  .bg_overlay_box_contact.show {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.4s;
+  }
+  /* end phần box background global */
+  /* global modal box */
+  
+  .global-modal-box {
+      z-index: 99998;
+      position: fixed;
+      width: 339px;
+      height: 100vh;
+      /* right: 0;
+      top: 0; */
+      box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+  }
+  
+  .global-modal-content {
+      width: 100%;
+      height: 100vh;
+      background-color: #323232;
+      color: #dbbfbf;
+      padding: 39px 35px 15px 15px;
+      overflow: scroll;
+  }
+  /*End global modal box */
+  
+  @media (min-width:320px) and (max-width:543px) {
+      .global-modal-box {
+          width: 319px;
+      }
+  }
